@@ -1,0 +1,9 @@
+connect-azaccount
+New-AzResourceGroup -Name azure-vm -Location "centralindia"
+New-AzResourceGroupDeployment -ResourceGroupName azure-vm -TemplateFile C:\Users\aanvyuser\Downloads\arm-templates\multivmdeploy.json -TemplateParameterFile C:\Users\aanvyuser\Downloads\arm-templates\multivmparameter.json
+
+linux-vm:
+New-AzResourceGroupDeployment -ResourceGroupName azure-vm -TemplateFile C:\Users\aanvyuser\Downloads\arm-templates\linuxvm.json -TemplateParameterFile C:\Users\aanvyuser\Downloads\arm-templates\linuxparameter.json
+
+2vm-2subners-2nsg-1vnet:
+New-AzResourceGroupDeployment -ResourceGroupName azure-vm -TemplateFile C:\Users\aanvyuser\Downloads\arm-templates\azuredeploy.json -TemplateParameterFile C:\Users\aanvyuser\Downloads\arm-templates\parameter.json
