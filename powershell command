@@ -1,4 +1,5 @@
 connect-azaccount
+Connect-AzAccount -Tenant <Your Tenant ID>
 New-AzResourceGroup -Name azure-vm -Location "centralindia"
 New-AzResourceGroupDeployment -ResourceGroupName azure-vm -TemplateFile C:\Users\aanvyuser\Downloads\arm-templates\multivmdeploy.json -TemplateParameterFile C:\Users\aanvyuser\Downloads\arm-templates\multivmparameter.json
 
